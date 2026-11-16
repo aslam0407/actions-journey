@@ -10,5 +10,6 @@ jobs:
         run: |
           uname -a
           ls -la
+          pwd
       - name: Count files in the repository
         run: find . -type f | wc -l
