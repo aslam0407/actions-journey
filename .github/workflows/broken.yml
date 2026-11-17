@@ -1,10 +1,11 @@
 name: site-check
 on: push
 jobs:
-  verify:
+  Verify:
     runs-on: ubuntu-latest
     steps:
-      - name: Read the readme
-        run:  echo "Hello Aslam"
+      - name: Get the code
+        uses: actions/checkout@v4
+        run:  cat README.md
       - name: Show the Python version
         run: pyhton3 --version
