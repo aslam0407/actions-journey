@@ -1,0 +1,8 @@
+name: region-workflow-var
+on: push
+jobs:
+  deploy-info-var:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show the target region
+        run: echo "Deploying to ${{ vars.DEPLOY_REGION }}"
