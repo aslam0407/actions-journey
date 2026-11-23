@@ -1,0 +1,12 @@
+name: gated-deploy-workflow
+on: push
+jobs:
+  ship-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run tests
+        run: echo "tests passed"
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        run: echo "deploying to production"
+
